@@ -65,6 +65,15 @@ The styling strictly follows the assignment requirements.
 
 The focus was to keep the logic clean, predictable, and easy to reason about.
 
+
+## Design Decisions
+
+- Used a 2D array to naturally represent row and column relationships.
+- Ripple logic is applied once per click to maintain deterministic behavior.
+- Explicit boundary checks prevent edge crashes.
+- Locked state is validated before any modification to preserve rule integrity.
+
+
 ## Running Locally
 
 npm install
