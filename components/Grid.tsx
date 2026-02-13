@@ -71,7 +71,7 @@ export default function Grid() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-900">
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-900 gap-6">
       <div className="grid grid-cols-3 gap-4">
         {grid.map((row, rowIndex) =>
           row.map((cell, colIndex) => (
@@ -92,6 +92,13 @@ export default function Grid() {
           ))
         )}
       </div>
+      <button
+      onClick={() => setGrid(createInitialGrid())}
+      className="text-sm px-4 py-1 border border-gray-500 rounded-[4px] text-gray-300 hover:text-white hover:border-white transition-colors"
+
+    >
+      Reset
+    </button>
     </div>
   );
 }
